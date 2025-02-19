@@ -1,0 +1,76 @@
+Core:
+    - Evolution Simulator
+        - Grid Based system for movement 
+        - Python and Raylib
+
+Mechanics:
+    Overview:
+    -- ENTITY
+        - 3 major Classes (These clesses will then hopefully be mutated to give the OPTIMAL stats fpr survival)
+                            size    vision   col
+            -- Assasin    0.3, 0.5   8,10   green
+            -- Norms      0.5, 0.8   7,4    blue
+            -- Tanks      0.8, 1.0   2,5    pink
+
+        - STATS
+            - Hunger = 10
+                - Constant for all classes but diminishes proporionally to size
+                - hunger_rate = 1 + (size / 4)
+            - Vision
+                - Determines how easy it is to find food.. 
+            - Speed
+                - Constant for all classes, has a value of 1 or variies with 2 = size
+                - Determines how many cells the entity can tranverse each turn
+            - Size
+                - The size as a percentage of each grid
+                - Size is more or less the most import factor
+            - Strenght
+                - Acts as both Damage and HP
+                - Stronger Entities will survive more fights
+                - Though ur strenght doesnt reset till uve eaten
+            - Age
+                - More or less a percentage in 0.3, 0.6 and 1.0 for child, teenager and adult respectively
+                - Until adult hood, stats will be only be a fraction of what they shld be
+        - PROGRESSION
+            - 100 entities are spawned initially
+            -- AIM: To determine how long it takes for the entire civilization to have only one or no surviors
+                - Hopefully have a way to track the generations
+        
+        - LOGIC
+            -- MOVEMENT:
+                - Entities traverse the cell with their set speed
+                - Entities move randomly till their hunger gets below the treshold
+                - Once this happens, they first check if they can find any food with their eyes
+                - If they can, they move towars it
+                - If they cant, they attempt following the stench.. the stench is supposed to be a 
+                    - little bit misleading till you can see the food, evey once in a
+                - - while a random position towards the food is chosen
+            -- COMBAT:
+                - Entities will try to avoid fights they cant win (especially assasins), they'll evaluate 
+                    -  the opponents size (not strenght)
+                - If they end up not avoiding it, the strongest will win (strenght dependent)
+            -- REPRODUCTION:
+                - Entities can reproduce and give birth to offsprings with stats on avergae with their parent
+                - Both need to atleast meet the hunger critaria, 0.6
+                - Reproduction takes strenght, (1 - hunger)
+                - The offsprings have a chance of getting mutated to either improve or spoil their stats 
+                    - (the deviant stats are chosen at random, the same with how mush the stats deviate)
+
+    -- FOOD
+        - is spawned randomly accros the map until the quota is reached.. not one at a time but all at once 
+        - it replenished hunger and strenght and it emits a stench in a 10 cells radius
+        - Food can also be found by stench (max distance for smell to be detected is 10) or by sight
+        - Food strench reduces each turn by a certain value (maybe .5)
+        - Once this stench reaches 0, food rots (thus disapears)
+
+    -- UI
+        - Game Speed Label and control
+        - Pause menu 
+        - Controls Menu (Tweak core values, like number of initial entities
+            - food spawn_rate)
+        - Zoom 
+        - Hover over entities to show their stats
+
+    -- Visualization
+        - Collect data from the simulataion
+        - Compile it somehow, to plot a graph for major stats or progresses through out

@@ -1,0 +1,140 @@
+🧬 Evolution Simulator - Development Roadmap
+
+A step-by-step guide to building your simulation efficiently.
+
+Check = ✔️
+
+TODO
+
+🟢 Phase 1: Core Systems (Foundation)
+
+1️⃣ Grid System (Movement & Positioning)
+
+[✔️] Implement a 2D grid using a list-based structure.
+
+[✔️] Define cell size and grid dimensions.
+
+[✔️] Create a function to convert (x, y) to grid coordinates.
+
+[ ] Implement entity movement:
+
+[ ] Random movement when not hungry.
+
+[ ] Food-seeking movement when hungry.
+
+[ ] Speed-based movement logic.
+
+
+🔵 Phase 2: Entities (Survival Mechanics)
+
+2️⃣ Entity System (Stats & Behaviors)
+
+[ ] Create an Entity class with:
+
+[ ] Size, Speed, Vision, Strength, Hunger, Age.
+
+[ ] Entity types: Assassin, Norms, Tanks.
+
+
+[ ] Implement hunger system:
+
+[ ] Hunger reduces over time.
+
+[ ] Hunger rate scales with size.
+
+
+[ ] Implement food detection:
+
+[ ] Check food within vision range.
+
+[ ] Check for scent (gradually weaker over distance).
+
+
+[ ] Implement movement logic based on hunger.
+
+
+
+🟡 Phase 3: Combat & Reproduction
+
+3️⃣ Combat System
+
+[ ] Implement collision detection between entities.
+
+[ ] Define combat rules:
+
+[ ] Compare entity strength.
+
+[ ] Weaker entity tries to flee (size-based avoidance).
+
+[ ] If they fight, stronger entity deals damage.
+
+[ ] If HP reaches 0, entity dies.
+
+
+4️⃣ Reproduction & Mutation
+
+[ ] Implement reproduction conditions:
+
+[ ] Both parents need at least 0.6 hunger.
+
+[ ] Reproduction costs strength (1 - hunger).
+
+
+[ ] Implement mutation system:
+
+[ ] Randomly modify size, vision, speed.
+
+[ ] Adjust mutation chances dynamically.
+
+
+
+🟠 Phase 4: Food System
+
+5️⃣ Food & Scent Mechanics
+
+[ ] Randomly spawn food across the grid.
+
+[ ] Implement scent decay (-0.5 per turn).
+
+[ ] Remove rotten food (scent = 0).
+
+[ ] Eating restores hunger & strength.
+
+
+
+🟣 Phase 5: UI & Visualization
+
+6️⃣ UI & Debugging Tools
+
+[ ] Add a Game Speed Controller.
+
+[ ] Implement Pause Menu.
+
+[ ] Add Entity Stats on Hover.
+
+[ ] Implement a zoom function.
+
+
+7️⃣ Data Visualization
+
+[ ] Collect simulation data.
+
+[ ] Plot graphs showing:
+
+Population over time.
+
+Mutation trends.
+
+Survival rates per class.
+
+
+🚀 Phase 6: Optimization & Polish
+
+[ ] Optimize grid performance (avoid excessive loops).
+
+[ ] Fine-tune mutation and survival balance.
+
+[ ] Add color-coded visualization for food, scent, and fights.
+
+
+
