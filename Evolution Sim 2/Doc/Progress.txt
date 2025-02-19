@@ -16,41 +16,41 @@ TODO
 
 [✔️] Create a function to convert (x, y) to grid coordinates.
 
-[ ] Implement entity movement:
+[✔️] Implement entity movement:
 
-[ ] Random movement when not hungry.
+[✔️] Random movement when not hungry.
 
-[ ] Food-seeking movement when hungry.
+[✔️] Food-seeking movement when hungry.
 
-[ ] Speed-based movement logic.
+[✔️] Speed-based movement logic.
 
 
 🔵 Phase 2: Entities (Survival Mechanics)
 
 2️⃣ Entity System (Stats & Behaviors)
 
-[ ] Create an Entity class with:
+[✔️] Create an Entity class with:
 
-[ ] Size, Speed, Vision, Strength, Hunger, Age.
+[✔️] Size, Speed, Vision, Strength, Hunger, Age.
 
-[ ] Entity types: Assassin, Norms, Tanks.
-
-
-[ ] Implement hunger system:
-
-[ ] Hunger reduces over time.
-
-[ ] Hunger rate scales with size.
+[✔️] Entity types: Assassin, Norms, Tanks.
 
 
-[ ] Implement food detection:
+[✔️] Implement hunger system:
 
-[ ] Check food within vision range.
+[✔️] Hunger reduces over time.
 
-[ ] Check for scent (gradually weaker over distance).
+[✔️] Hunger rate scales with size.
 
 
-[ ] Implement movement logic based on hunger.
+[✔️] Implement food detection:
+
+[✔️] Check food within vision range.
+
+[✔️] Check for scent (gradually weaker over distance).
+
+
+[✔️] Implement movement logic based on hunger.
 
 
 
@@ -58,17 +58,17 @@ TODO
 
 3️⃣ Combat System
 
-[ ] Implement collision detection between entities.
+[✔️] Implement collision detection between entities.
 
-[ ] Define combat rules:
+[✔️] Define combat rules:
 
-[ ] Compare entity strength.
+[✔️] Compare entity strength.
 
-[ ] Weaker entity tries to flee (size-based avoidance).
+[✔️] Weaker entity tries to flee (size-based avoidance).
 
-[ ] If they fight, stronger entity deals damage.
+[✔️] If they fight, stronger entity deals damage.
 
-[ ] If HP reaches 0, entity dies.
+[✔️] If HP reaches 0, entity dies.
 
 
 4️⃣ Reproduction & Mutation
@@ -92,9 +92,9 @@ TODO
 
 5️⃣ Food & Scent Mechanics
 
-[ ] Randomly spawn food across the grid.
+[✔️] Randomly spawn food across the grid.
 
-[ ] Implement scent decay (-0.5 per turn).
+[✔️] Implement scent decay (-0.5 per turn).
 
 [ ] Remove rotten food (scent = 0).
 
