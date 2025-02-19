@@ -88,8 +88,6 @@ class Entity:
         dx = 1 if x < tx else -1 if x > tx else 0
         dy = 1 if y < ty else -1 if y > ty else 0
 
-        print("Moving Direction: ", (dx, dy))
-
         return dx * direction, dy * direction
 
     def move_away_from(self, pos):
@@ -115,14 +113,11 @@ class Entity:
 
         dx, dy = 0, 0
         if self.stats.hunger < 5:
-            print("Hungry! ")
             if self.closest_food:
-                print(" -- Saw Food")
                 dx, dy = self.move_towards(self.closest_food.pos)
 
             else:
                 if self.food_smelt:
-                    print(" -- Smelt Food")
                     dx, dy = self.move_towards(self.food_smelt.pos)
 
         elif self.closest_enemy:  # Either Flee or pursue enemy based on size
@@ -132,7 +127,6 @@ class Entity:
                 dx, dy = self.move_towards(self.closest_enemy.pos)
 
         if dx == 0 and dy == 0:
-            print("Moving Aimelessly")
             dx, dy = self.move_towards_a_random_direction()
 
         new_pos = x + dx, y + dy

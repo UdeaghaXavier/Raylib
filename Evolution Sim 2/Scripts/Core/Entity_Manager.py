@@ -214,13 +214,10 @@ class Entity_Manager:
                 if type(entity) == Food:
                     entity: Food = entity
                     entity.update()
-                    if x == 3 and y == 0:
-                        print(entity.age)
                     food.append(entity)
 
         self.info.food = food
         self.info.entities = entities
-        print(f" -- -- -- {self.turn}")
 
     def spawn_entities(self):
         for _ in range(self.initial_enemy_count):
