@@ -39,7 +39,7 @@ This is a grid-based evolution simulator built using Python and Raylib. The simu
    python main.py
    ```
    
-![Simulation Preview](assets/simulation.gif)
+![Simulation Preview](Assets/simulation.gif)
 
 
 ## Contribution
