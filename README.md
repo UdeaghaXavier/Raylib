@@ -32,20 +32,13 @@ This is a grid-based evolution simulator built using Python and Raylib. The simu
    ```
 2. Install dependencies:
    ```sh
-   pip install -r requirements.txt
+   pip install raylib == 5.5.0.2
    ```
 3. Run the simulation:
    ```sh
    python main.py
    ```
-
-## Hiding Documentation Folder
-To hide the `doc` folder from Git, add the following to `.gitignore`:
-```sh
-/doc/
-```
-This prevents Git from tracking files inside `doc/`.
-
+   
 ## Contribution
 Feel free to contribute by opening issues, submitting pull requests, or suggesting improvements!
 
